@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+    background-image: url(https://inprogrammer.com/wp-content/uploads/2022/06/Image-for-introduction-to-python-9.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+}
+h1{
+    color:white ;
+    background-color: blue;
+}
+        </style>
+    </head>
+    <body style="text-align:center">
+        <h1 style="font-size:20px">Guess the Number Game</h1>
+        <p style="font-size:30px;font-family:sans-serif">Guess a Number between 1 and 10:</p>
+        <input type="number" id="a1">
+        <button onclick="guess()">Submit Guess</button>
+        <p id="rat"></p>
+        <script>
+            function guess(){
+                let num = document.getElementById('a1').value
+                let random = Math.floor(Math.random()*10)
+            
+            if(num==random){
+                document.getElementById("rat").innerHTML="WOW You got it right"
+            }
+            else if(num>random){
+                document.getElementById("rat").innerHTML="Too high"
+            }
+            else{
+                document.getElementById("rat").innerHTML="Too low"
+            }
+            }
+        </script>
+    </body>
+</html>
